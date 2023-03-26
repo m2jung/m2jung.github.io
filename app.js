@@ -15,7 +15,6 @@ function onLoginSubmit(event) { //로그인시 진행 (event object 정보를 �
     paintGreetings(username); //입력받은 username 으로 greeting 화면 출력 함수 실행
 }
 
-
 function paintGreetings(username) {
     greeting.classList.remove(HIDDEN_CLASSNAME);  
     greeting.innerText = `W E L C O M E . ${username}`;
