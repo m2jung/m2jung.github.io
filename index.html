@@ -10,13 +10,15 @@
 <body>
     <div class="start-screen">
         <form class="hidden" id="login-form">
-            <input required maxlength="10" type="text" placeholder="Enter your name">    
-            <input type="submit" value="">
+            <h1>What is your name</h1>
+            <input required maxlength="10" type="text" type="submit">    
         </form>
-        <!--Wellcome-->
-        <h1 id="greeting" class="hidden"></h1>
-        <!-- clock (Default 00:00)-->
-        <h2 id="clock">00:00</h2>
+        <div class="main-screen">
+            <!-- clock (Default 00:00)-->
+            <h2 id="clock" class="hidden"> Loading Today...</h2>
+            <!--Wellcome-->
+            <h1 id="greeting" class="hidden"></h1>
+        </div>
     </div>
      
     <script src="js/clock.js"></script>

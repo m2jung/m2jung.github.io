@@ -5,6 +5,12 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    background-image: url("../universe.jpg");
+    color: white;
+}
+
 .hidden {
     display: none;
 }
@@ -13,17 +19,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     width: 100vw;
     height: 100vh;
 
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Rajdhani', sans-serif; 
 }
 
-#login-form input {
+#login-form input[type=text] {
     border: none;
     border-bottom: 3px solid green;
     text-align: center;
-    font-size: 20px;
+    margin-top: 15px;
+    font-size: 20px; 
+    width: 244px;
+}
+#login-form input[type=submit] {
+    display: none;
 }
 
+#clock {
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+}
+
+#greeting {
+    padding-bottom: 30px;
+}

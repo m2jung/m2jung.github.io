@@ -1,6 +1,6 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input"); 
-const greeting = document.querySelector("#greeting"); //h1
+const greeting = document.querySelector("#greeting");
 
 // 오타로인한 오류방지 , 반복되는 문자,String만 포함된 변수 저장(대문자는 관습이다)
 const HIDDEN_CLASSNAME = "hidden";
@@ -15,9 +15,21 @@ function onLoginSubmit(event) { //로그인시 진행 (event object 정보를 �
     paintGreetings(username); //입력받은 username 으로 greeting 화면 출력 함수 실행
 }
 
+
+function typeString(str, target) {
+    var idx = 0;
+    var timer = setInterval(function() {
+      target.innerHTML += str[idx]; //innerText는 띄어쓰기 무시함
+      idx++;
+      if (idx === str.length) {
+        clearInterval(timer);
+      }
+    }, 60);
+  }
 function paintGreetings(username) {
-    greeting.classList.remove(HIDDEN_CLASSNAME);  
-    greeting.innerText = `W E L C O M E . ${username}`;
+    greeting.classList.remove(HIDDEN_CLASSNAME); 
+    clock.classList.remove(HIDDEN_CLASSNAME); 
+    typeString(`W E L C O M E ${username}`, greeting);
 }
 
 // 새로고침시 초기화 되지 않게 db저장시 계속 화면 띄우기
