@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: url("../earth.png");
+    background-image: url("../image/earth.png");
     color: white;
 }
 
@@ -27,9 +27,10 @@ body {
     font-family: 'Rajdhani', sans-serif; 
 }
 
+/* 로그인 line-bottom 효과 */
 #login-form input[type=text] {
     border: none;
-    border-bottom: 3px solid green;
+    border-bottom: 3px solid white;
     text-align: center;
     margin-top: 15px;
     font-size: 20px; 
