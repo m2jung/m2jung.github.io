@@ -37,6 +37,6 @@ const saveUsername = localStorage.getItem("USERNAME_KEY");
 if(saveUsername === null ){ //storage에 사용자 이름의 값이 없으면
     loginForm.classList.remove(HIDDEN_CLASSNAME); //로그인화면 띄우기 
     loginForm.addEventListener("submit", onLoginSubmit); //로그인 submit시 실행되는 함수 실행
-}else {
+  }else {
     paintGreetings(saveUsername);
 }
