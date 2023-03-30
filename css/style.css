@@ -42,19 +42,19 @@ img {
 
 /* 로그인 line-bottom 효과 */
 #login-form input {
-    border:none;
-    outline: none;
+    border: none;
     background: none;
-}
+    border-bottom: 2px solid;
+    transition: border-color 0.5s ease-out ;
+} 
 
 #login-form input:focus {
-    outline: none;
+    outline: none ;
+    border-color: darkorchid;
  
 }
 /* 로그인 line-bottom transition*/
 #login-form input[type=text] {
-    border-bottom: 2px solid white;
-    transition: 3s, ease-out black;
     text-align: center;
     margin-top: 15px;
     font-size: 20px; 
@@ -76,7 +76,7 @@ img {
     padding-bottom: 20px;
 }
 
-#quote {
+#main-quote {
     display: flex;
     justify-content: center;
     align-items: center;

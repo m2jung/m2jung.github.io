@@ -32,18 +32,17 @@ const quotes = [
     }
 ];   
 
-const author = document.querySelector("#quote span:last-child");
-const quote = document.querySelector("#quote span:first-child");
-
+const author = document.querySelector("#main-quote span:last-child");
+const quote = document.querySelector("#main-quote span:first-child");
+const mainQuote = document.querySelector("#main-quote");
 //Math. 메서드 사용 random():0~1까지 사이의 난수, round:반올림 ceil:올림 floor:버림
 const randomQuote = (quotes[Math.floor(Math.random() * quotes.length)]);
 
+/* 로그인 후 화면 나타나게 수정하기*/
 function quoteShow() {
-    quote.classList.remove(HIDDEN_CLASSNAME);
-    quote.innerText = randomQuote.quote;
+    mainQuote.classList.remove(HIDDEN_CLASSNAME);
+    quote.innerText = `${randomQuote.quote}`;
     author.innerText = `-  ${randomQuote.author} -`;
 };
 
 quoteShow();
-
-
