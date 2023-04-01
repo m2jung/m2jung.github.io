@@ -1,3 +1,4 @@
+
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input"); 
 const greeting = document.querySelector("#greeting");
@@ -13,7 +14,6 @@ function onLoginSubmit(event) { //로그인시 진행 (event object 정보를 �
     const username = loginInput.value; //login시 입력된 값 username 저장
     localStorage.setItem("USERNAME_KEY", username) //웹의 db에 저장
     paintGreetings(username); //입력받은 username 으로 greeting 화면 출력 함수 실행
- 
   }
 
 // 타이핑 효과
@@ -30,9 +30,10 @@ function typeString(str, target) {
 // 로그인 후 실행화면 
 function paintGreetings(username) {
     greeting.classList.remove(HIDDEN_CLASSNAME); 
-    clock.classList.remove(HIDDEN_CLASSNAME); 
-    typeString(`W E L C O M E ${username}`, greeting);
-  
+    clock.classList.remove(HIDDEN_CLASSNAME);
+    showTodo();
+    showQuote();
+    typeString(`W E L C O M E  ${username}`, greeting);
 }
 
 // 새로고침시 초기화 되지 않게 db저장시 계속 화면 띄우기
@@ -42,4 +43,4 @@ if(saveUsername === null ){ //storage에 사용자 이름의 값이 없으면
     loginForm.addEventListener("submit", onLoginSubmit); //로그인 submit시 실행되는 함수 실행
   }else {
     paintGreetings(saveUsername);
-}
+  }

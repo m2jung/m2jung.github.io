@@ -4,13 +4,14 @@
 * {
     margin: 0;
     padding: 0;
-    
-}
 
+}
 body {
     width: 100vw;
     height: 100vh;
     color: white;
+    position: fixed;
+
 }
 
 img {
@@ -26,8 +27,19 @@ img {
 
 ul {
 list-style:circle; 
+list-style-position: inside;
 }
 
+button {
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    color: white;
+    font-size: 4px;
+    text-align:center;
+    opacity: 80%;
+    margin-left: 5px;
+}
 
 .hidden {
     display: none;
@@ -38,27 +50,32 @@ list-style:circle;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
     width: 100vw;
     height: 100vh;
 
     font-family: 'Rajdhani', sans-serif; 
 }
 
-/* 로그인 line-bottom 효과 */
+#login-form{
+    text-align: center;
+}
+#login-form h1:first-child {
+    font-size: 30px;
+}
+
 #login-form input {
     border: none;
     background: none;
     border-bottom: 2px solid;
     transition: border-color 0.5s ease-out ;
+    margin-bottom: 30px;
 } 
 
 #login-form input:focus {
     outline: none ;
     border-color: darkorchid;
- 
 }
-/* 로그인 line-bottom transition*/
+
 #login-form input[type=text] {
     text-align: center;
     margin-top: 15px;
@@ -78,14 +95,13 @@ list-style:circle;
 }
 
 #greeting {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 #main-quote {
     display: flex;
     flex-direction: column;
 
-    margin-top: 10px;
     text-align: center;
     width: 470px;
 }
@@ -93,19 +109,36 @@ list-style:circle;
     margin-top: 5px;;
 }
 
+#main-todo {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 #todo-form input{
     text-align: center;
     outline: none;
-
-    margin: 50px 0 20px 0;
+    margin: 35px 0 20px 0;
 }
 
+#todo-form input:focus::placeholder {
+    font-size: 15px;
+}
+
+
 #weather {
-    padding:20px;
+    padding:15px;
+}
+
+/* focus 전 후 텍스트 바뀌기 js */
+#todo-form input::placeholder {
+    color: darkblue;
+    font-weight: 600;
 }
 
 .footer-screen {
-    border: 2px solid yellow;
     display: flex;
     justify-content: center;
     align-items: center;

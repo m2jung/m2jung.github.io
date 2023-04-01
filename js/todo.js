@@ -25,7 +25,7 @@ function paintTodo(newTodo) { //Submit해서 얻은 input값을 전달받음
     li.id = newTodo.id; //html li의 id 적용
     const span = document.createElement("span");// li 안에 span 생성
     const button = document.createElement("button"); // span 옆에 삭제버튼
-    button.innerText = "x"; 
+    button.innerText = "X"; 
     button.addEventListener("click",deleteTodo);
     span.innerText = newTodo.text ;
     //appendChild 는 마지막에 추가되도록 한다.
@@ -47,8 +47,7 @@ function handleTodoSubmit(event) {
     saveTodos();//문자열로 저장
     paintTodo(newTodoObj); //입력된 value paintTodo 함수로 전달 
 }
-
-
+    
 todoForm.addEventListener("submit",handleTodoSubmit);
 
 //3. 저장된 값들 정리. 각각의 li 에 함수 적용가능  
@@ -58,5 +57,13 @@ if(savedTodos != null) { // 만약 localStorage에 저장된 todo가 없으면
     const parsedTodos = JSON.parse(savedTodos); //배열 형태 문자열을 다시 깔끔하게 문자열로 저장
     toDos = parsedTodos; //마지막 문자열 형태로 let 배열에 저장 
     parsedTodos.forEach(paintTodo);//forEach : 배열의 item 각각에 함수 적용 가능 , 값의 입력 함수   호출
+}
+
+function showTodo() { //로그인 후 TODO 화면에 보여주기
+    if(localStorage.getItem === null ){ 
+        todoForm.classList.add(HIDDEN_CLASSNAME);
+    }else {
+        todoForm.classList.remove(HIDDEN_CLASSNAME);
+    };
 }
 

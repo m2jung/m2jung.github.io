@@ -32,17 +32,28 @@ const quotes = [
     }
 ];   
 
+const footer = document.querySelector(".footer-screen");
 const author = document.querySelector("#main-quote span:last-child");
 const quote = document.querySelector("#main-quote span:first-child");
 const mainQuote = document.querySelector("#main-quote");
 //Math. 메서드 사용 random():0~1까지 사이의 난수, round:반올림 ceil:올림 floor:버림
 const randomQuote = (quotes[Math.floor(Math.random() * quotes.length)]);
 
-/* 로그인 후 화면 나타나게 수정하기*/
-if(saveUsername === null ){ //storage에 사용자 이름의 값이 없으면
-    mainQuote.classList.add(HIDDEN_CLASSNAME);
-}else {
-    mainQuote.classList.remove(HIDDEN_CLASSNAME);
+
+function quoteText() { //입력 
     quote.innerText = randomQuote.quote;
     author.innerText = `-  ${randomQuote.author} -`;
-};
+}
+
+
+function showQuote() { //로그인 후 quote 화면에 보여주기
+    if(localStorage.getItem === null ){ 
+        mainQuote.classList.add(HIDDEN_CLASSNAME);
+    }else {
+        mainQuote.classList.remove(HIDDEN_CLASSNAME);
+        quoteText();
+    };
+}
+
+
+

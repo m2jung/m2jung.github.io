@@ -15,6 +15,7 @@
     </div>
     <div class="start-screen">
         <form class="hidden" id="login-form">
+            <h1>Hello,</h1>
             <h1>What is your name?</h1>
             <input required maxlength="10" type="text">    
             <input type="submit" value="">
@@ -24,28 +25,31 @@
             <h2 id="clock" class="hidden"> Loading Today...</h2>
             <!--Wellcome-->
             <h1 id="greeting" class="hidden"></h1>
-            <!--quote-->
         </div>
         <div class="footer-screen">
-            <div class="hidden" id="main-quote">
+            <!--quote-->
+            <div id="main-quote">
                 <span></span>
                 <span></span>
             </div>
-                <form id="todo-form">
-                    <input type="text" placeholder="TODO">
+            <!--todo list-->
+            <div id="main-todo">
+                <form class= "hidden" id="todo-form">
+                    <input type="text" placeholder="Just do it">
                 </form>
                 <ul id="todo-list"></ul>
+            </div>
         </div>
     </div>
   
     
      
-    <script src="js/clock.js"></script>
-    <script src="js/login.js"></script>
     <script src="js/quotes.js"></script>
-    <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/clock.js"></script>
     <script src="js/weather.js"></script>
-
+    <script src="js/background.js"></script>
+    <script src="js/login.js"></script>
+    
 </body>
 </html>
