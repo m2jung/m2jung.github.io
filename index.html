@@ -8,9 +8,14 @@
     <title>My Momentum App</title>
 </head>
 <body>
+    <div id="weather">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     <div class="start-screen">
         <form class="hidden" id="login-form">
-            <h1>What is your name</h1>
+            <h1>What is your name?</h1>
             <input required maxlength="10" type="text">    
             <input type="submit" value="">
         </form>
@@ -21,16 +26,26 @@
             <h1 id="greeting" class="hidden"></h1>
             <!--quote-->
         </div>
-        <div class="hidden" id="main-quote">
-            <span></span>
-            <span></span>
+        <div class="footer-screen">
+            <div class="hidden" id="main-quote">
+                <span></span>
+                <span></span>
+            </div>
+                <form id="todo-form">
+                    <input type="text" placeholder="TODO">
+                </form>
+                <ul id="todo-list"></ul>
         </div>
     </div>
+  
+    
      
     <script src="js/clock.js"></script>
     <script src="js/login.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
 
 </body>
 </html>

@@ -24,6 +24,11 @@ img {
     z-index: -1;
 }
 
+ul {
+list-style:circle; 
+}
+
+
 .hidden {
     display: none;
 }
@@ -78,10 +83,31 @@ img {
 
 #main-quote {
     display: flex;
+    flex-direction: column;
+
+    margin-top: 10px;
+    text-align: center;
+    width: 470px;
+}
+#main-quote span:last-child {
+    margin-top: 5px;;
+}
+
+#todo-form input{
+    text-align: center;
+    outline: none;
+
+    margin: 50px 0 20px 0;
+}
+
+#weather {
+    padding:20px;
+}
+
+.footer-screen {
+    border: 2px solid yellow;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: center;
-
-    width: 470px;
 }

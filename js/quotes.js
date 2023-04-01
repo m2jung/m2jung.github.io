@@ -39,10 +39,10 @@ const mainQuote = document.querySelector("#main-quote");
 const randomQuote = (quotes[Math.floor(Math.random() * quotes.length)]);
 
 /* 로그인 후 화면 나타나게 수정하기*/
-function quoteShow() {
+if(saveUsername === null ){ //storage에 사용자 이름의 값이 없으면
+    mainQuote.classList.add(HIDDEN_CLASSNAME);
+}else {
     mainQuote.classList.remove(HIDDEN_CLASSNAME);
-    quote.innerText = `${randomQuote.quote}`;
+    quote.innerText = randomQuote.quote;
     author.innerText = `-  ${randomQuote.author} -`;
 };
-
-quoteShow();

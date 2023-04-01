@@ -6,7 +6,7 @@ const greeting = document.querySelector("#greeting");
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 
-
+// 1. 첫번째 실행화면 
 function onLoginSubmit(event) { //로그인시 진행 (event object 정보를 담은 채로 함수 호출)
     event.preventDefault(); // submit의 기본 동작 새로고침 방지
     loginForm.classList.add(HIDDEN_CLASSNAME);//form 로그인 화면 숨기기
@@ -16,7 +16,7 @@ function onLoginSubmit(event) { //로그인시 진행 (event object 정보를 �
  
   }
 
-
+// 타이핑 효과
 function typeString(str, target) {
     var idx = 0;
     var timer = setInterval(function() {
@@ -27,6 +27,7 @@ function typeString(str, target) {
       }
     }, 60);
   }
+// 로그인 후 실행화면 
 function paintGreetings(username) {
     greeting.classList.remove(HIDDEN_CLASSNAME); 
     clock.classList.remove(HIDDEN_CLASSNAME); 
